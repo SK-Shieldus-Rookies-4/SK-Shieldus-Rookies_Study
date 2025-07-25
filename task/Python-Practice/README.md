@@ -1,4 +1,4 @@
-# SK-Shieldus-Rookies-Python_-Practice
+# SK-Shieldus-Rookies-Python_Practice
 ## Python연습문제
 
 파이썬 기본 연습문제는 7월 28일(월) 까지 제출 하세요 
