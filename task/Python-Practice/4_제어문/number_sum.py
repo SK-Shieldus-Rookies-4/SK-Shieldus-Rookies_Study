@@ -9,5 +9,5 @@ while True:
     if number == 0 :
         break
     total += number
-    print(f'입력된 숫자들의 합 : {total}')
+print(f'입력된 숫자들의 합 : {total}')
 
