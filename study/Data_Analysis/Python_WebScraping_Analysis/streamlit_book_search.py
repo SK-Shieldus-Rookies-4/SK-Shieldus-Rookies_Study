@@ -43,7 +43,7 @@ def search_naver_api(endpoint, query, display=50):
     try:
         res = requests.get(url, params=payload, headers=headers)
         res.raise_for_status()  # 에러 발생 시 예외 처리
-        return res.json().get('items', [])
+        return res.json().get('items', []) # res.json()['items'] 이 코드보다 더 나은 방식
     except requests.exceptions.RequestException as e:
         st.error(f"API 요청 중 오류가 발생했습니다: {e}")
         return []
@@ -66,6 +66,7 @@ def filter_and_sort_books(df, min_discount=20000):
         DataFrame: 필터링 및 정렬된 결과
     """
     if df.empty:
+        # empty  한 DataFrame 객체를 반환함
         return pd.DataFrame()
     
     # discount 열이 문자열일 경우 숫자로 변환
@@ -90,7 +91,7 @@ def filter_books_by_publisher(df, publisher_name):
     if df.empty or publisher_name == "":
         return pd.DataFrame()
     
-    # 컬럼 목록 필터링 ('image'와 'description' 제외)
+    # 컬럼 목록 필터링 ('image'와 'description' 제외) ['title', 'author'...]
     columns_to_show = [col for col in df.columns if col not in ['image', 'description']]
     
     return (
@@ -112,7 +113,7 @@ st.sidebar.header("필터링 옵션")
 min_discount = st.sidebar.number_input("최소 할인 금액", 0, 100000, 20000, 1000)
 publisher_filter = st.sidebar.text_input("출판사 필터", "")
 
-# 메인 영역
+# 메인 영역 (언패킹)
 tab1, tab2, tab3 = st.tabs(["전체 결과", "할인 필터링", "출판사 필터링"])
 
 # 데이터를 저장할 상태 변수
