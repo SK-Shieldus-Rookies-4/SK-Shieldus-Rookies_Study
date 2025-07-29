@@ -1,3 +1,5 @@
+# streamlit run streamlit_combo.py
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,14 +7,16 @@ import seaborn as sns
 
 # 데이터 로드
 data = pd.read_csv('data/data_draw_korea.csv')
+# 'Unnamed: 0' 컬럼 삭제
 data = data.drop('Unnamed: 0', axis=1)
+# 한글폰트 설정
 plt.rc('font', family="Malgun Gothic")
 
 # Streamlit UI 구성
 st.title(" 대한민국 광역시도 데이터 분석")
 
 # 광역시도 목록 가져오기
-sido_list = data['광역시도'].unique()
+sido_list = data['광역시도'].unique() #['경기도', '']
 
 # 광역시도 선택
 sido_name = st.selectbox("조회할 광역시도를 선택하세요", sido_list)
@@ -31,7 +35,9 @@ else:
     st.subheader(f" {sido_name}의 인구수 현황")
     fig, ax = plt.subplots(figsize=(18, 12))
     sns.barplot(x='행정구역', y='인구수', data=sido_df.sort_values(by='인구수', ascending=False), ax=ax, hue='행정구역')
+    # Plot의 타이틀
     ax.set_title(f'{sido_name} 행정구역별 인구수')
+    # streamlit의 pyplot()
     st.pyplot(fig)
 
     # 면적 그래프
