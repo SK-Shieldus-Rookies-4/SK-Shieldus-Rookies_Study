@@ -1,10 +1,13 @@
+# streamlit run streamlit_actor_search.py
+
 import streamlit as st
 import pandas as pd
 
 # 데이터 로드
+# @ 붙은건 파이썬에선 데코레이터 , 자바에서는 어노테이션
 @st.cache_data
 def load_data():
-    df = pd.read_csv('netflix_titles.csv')
+    df = pd.read_csv('data/netflix_titles.csv')
     df['cast'] = df['cast'].fillna('No Data')
     return df
 
@@ -22,6 +25,8 @@ if actor_name:
 
     if not results.empty:
         st.success(f"🔎 {actor_name}이(가) 출연한 콘텐츠 {len(results)}개가 검색되었습니다.")
-        st.dataframe(results[['title', 'type', 'release_year', 'listed_in']].sort_values(by='release_year', ascending=False))
+        st.dataframe(results[['title', 'type', 'release_year', 'listed_in']]\
+                     .sort_values(by='release_year', ascending=False)\
+                     .reset_index(drop=True))
     else:
         st.warning(f" {actor_name} 출연작이 없습니다.")
