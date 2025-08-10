@@ -30,7 +30,7 @@ public class LibraryManagementSystem {
         library.addBook(new Book("Clean Code", "Robert C. Martin", "978-0-13-235088-4", 2008));
         library.addBook(new Book("Effective Java", "Joshua Bloch", "978-0-13-468599-1", 2018));
         library.addBook(new Book("Head First Java", "Kathy Sierra", "978-0-596-00920-5", 2005));
-        library.addBook(new Book("자바의 정석", "남궁성", "978-89-01-14077-4", 2019));
+        library.addBook(new Book("자바의 정석", "남궁성", "978-89-01-14077-4", 2019));       
     }
 
     private static void testFindBook(Library library) {

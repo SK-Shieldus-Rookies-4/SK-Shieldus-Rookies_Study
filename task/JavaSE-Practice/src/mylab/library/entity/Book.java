@@ -79,9 +79,6 @@ public class Book {
                 + " 출판년도: " + publishYear 
                 + " 대출 가능 여부: " + availability;
 	}
-
-	
-	
 	
 }
 
