@@ -77,7 +77,7 @@ public class Book {
                 + " 저자: " + author 
                 + " ISBN: " + isbn 
                 + " 출판년도: " + publishYear 
-                + " 대출 가능 여부: " + availability + "]";
+                + " 대출 가능 여부: " + availability;
 	}
 
 	

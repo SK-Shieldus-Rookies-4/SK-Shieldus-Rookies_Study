@@ -50,25 +50,17 @@ public class Library {
     }
 
     public boolean checkOutBook(String isbn) {
-        System.out.println("==== 도서 대출 테스트 =====");
         Book book = findByISBN(isbn);
         if (book != null && book.checkOut()) {
-            System.out.println("도서 대출 성공!");
-            System.out.println("대출된 도서 정보:");
-            System.out.println(book.toString());
             return true;
         }
         return false;
     }
 
     public boolean returnBook(String isbn) {
-        System.out.println("==== 도서 반납 테스트 =====");
         Book book = findByISBN(isbn);
         if (book != null && !book.isAvailable()) {
             book.returnBook();
-            System.out.println("도서 반납 성공!");
-            System.out.println("반납된 도서 정보:");
-            System.out.println(book.toString());
             return true;
         }
         return false;
