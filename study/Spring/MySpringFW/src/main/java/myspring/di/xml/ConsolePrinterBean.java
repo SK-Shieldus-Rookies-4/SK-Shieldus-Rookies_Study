@@ -1,7 +1,7 @@
 package myspring.di.xml;
 
-public class ConsolePrinter implements Printer {
-	public ConsolePrinter() {
+public class ConsolePrinterBean implements PrinterBean {
+	public ConsolePrinterBean() {
 		System.out.println(this.getClass().getName() + " 생성자가 호출됨");
 	}
 	

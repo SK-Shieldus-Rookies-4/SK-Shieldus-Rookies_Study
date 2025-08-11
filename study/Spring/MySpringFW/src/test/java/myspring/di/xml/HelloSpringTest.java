@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 public class HelloSpringTest {
 	@Autowired
 	@Qualifier("helloC")
-	Hello hello;
+	HelloBean hello;
 	
 	@Test
 	void helloBeanByConstructor() {

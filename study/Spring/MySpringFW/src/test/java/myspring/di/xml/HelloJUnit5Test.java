@@ -20,8 +20,8 @@ public class HelloJUnit5Test {
 	@Test
 	void helloBean() {
 		//2. Container가 생성한 Hello 스프링빈을 요청하기
-		Hello helloById = (Hello)context.getBean("hello");
-		Hello helloByType = context.getBean("hello", Hello.class);
+		HelloBean helloById = (HelloBean)context.getBean("hello");
+		HelloBean helloByType = context.getBean("hello", HelloBean.class);
 		
 		//주소를 비교해서 Singleton 인지 확인하기
 		System.out.println(helloById == helloByType);
@@ -36,7 +36,7 @@ public class HelloJUnit5Test {
 		helloByType.print();
 		
 		//StringPrinter 스프링빈을 요청하기 
-		Printer printer = context.getBean("stringPrinter", Printer.class);
+		PrinterBean printer = context.getBean("stringPrinter", PrinterBean.class);
 		assertEquals("Hello 스프링", printer.toString());
 		
 		
