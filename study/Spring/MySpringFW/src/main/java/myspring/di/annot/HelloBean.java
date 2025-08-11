@@ -10,21 +10,28 @@ import org.springframework.stereotype.Component;
 //<bean id="helloBean" class="myspring.di.annot.HelloBean" />
 @Component("helloBean")
 public class HelloBean {
-	//<property name="name" value="어노테이션"/>
-	@Value("어노테이션")
+	//<property name="name" value="어노테이션" />
+//전략2 - setter injection	
+//	@Value("어노테이션")
 	String name;
 	
-	//<property name="printer" ref="stringPrinter"/>
-	@Autowired
-	@Qualifier("stringPrinterBean")
+	//<property name="printer" ref="stringPrinter" />
+//전략2 - setter injection	
+//	@Autowired
+//	@Qualifier("stringPrinterBean")
 	PrinterBean printer;
+	
 	List<String> names;
 
 	public HelloBean() {
 		System.out.println(this.getClass().getName() + " 생성자가 호출됨");
 	}
-
-	public HelloBean(String name, PrinterBean printer) {
+	
+//전략2 - constructor injection
+	@Autowired
+	public HelloBean(
+			@Value("생성자어노테이션") String name, 
+			@Qualifier("stringPrinterBean") PrinterBean printer) {
 		System.out.println(this.getClass().getName() + " Overloaded 생성자가 호출됨");
 		this.name = name;
 		this.printer = printer;
@@ -34,19 +41,18 @@ public class HelloBean {
 		return this.names;
 	}
 
-	
 	public void setNames(List<String> list) {
 		this.names = list;
 	}
 
-//	//setFirstName
+	//setFirstName
 //	public void setName(String name) {
-//		System.out.println(this.getClass().getName() + "setName() 호출됨" + name);
+//		System.out.println(this.getClass().getName() + " setName() 호출됨 " + name);
 //		this.name = name;
 //	}
-//
-//	public void setPrinter(Printer printer) {
-//		System.out.println(this.getClass().getName() + "setName() 호출됨" + 
+
+//	public void setPrinter(PrinterBean printer) {
+//		System.out.println(this.getClass().getName() + " setPrinter() 호출됨 " + 
 //				printer.getClass().getName());
 //		this.printer = printer;
 //	}
@@ -57,6 +63,6 @@ public class HelloBean {
 
 	public void print() {
 		this.printer.print(sayHello());
- 	}
+	}
 
 }
