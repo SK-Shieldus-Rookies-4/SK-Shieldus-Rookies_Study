@@ -22,9 +22,17 @@ public class HelloConfigTest {
 	
 	@Test
 	void hello전략32() { //유니코드라 한글로 지어도 가능 
+		//setName() 테스트 
 		System.out.println(hello.sayHello());  //스프링 
+		
+		//setPrinter() 테스트 
 		hello.print();
 		System.out.println(printer.toString());
+		
+		//setNames() 테스트 
+		for(String name:hello.getNames()) {
+			System.out.println(name);
+		}
 	}
 
 }
