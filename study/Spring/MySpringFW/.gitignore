@@ -16,7 +16,3 @@ bin/
 .springBeans
 .sts4-cache
 
-### Custom ignore ###
-Servers/
-SpringFWConfig/
-SpringFWXml/
