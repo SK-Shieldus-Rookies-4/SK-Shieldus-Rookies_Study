@@ -1,5 +1,5 @@
 package myspring.di.xml;
 
-public interface PrinterBean {
+public interface Printer {
 	public void print(String message);
 }

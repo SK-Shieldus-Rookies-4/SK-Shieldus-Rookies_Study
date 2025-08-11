@@ -2,16 +2,16 @@ package myspring.di.xml;
 
 import java.util.List;
 
-public class HelloBean {
+public class Hello {
 	String name;
-	PrinterBean printer;
+	Printer printer;
 	List<String> names;
 
-	public HelloBean() {
+	public Hello() {
 		System.out.println(this.getClass().getName() + " 생성자가 호출됨");
 	}
 
-	public HelloBean(String name, PrinterBean printer) {
+	public Hello(String name, Printer printer) {
 		System.out.println(this.getClass().getName() + " Overloaded 생성자가 호출됨");
 		this.name = name;
 		this.printer = printer;
@@ -31,7 +31,7 @@ public class HelloBean {
 		this.name = name;
 	}
 
-	public void setPrinter(PrinterBean printer) {
+	public void setPrinter(Printer printer) {
 		System.out.println(this.getClass().getName() + "setName() 호출됨" + 
 				printer.getClass().getName());
 		this.printer = printer;

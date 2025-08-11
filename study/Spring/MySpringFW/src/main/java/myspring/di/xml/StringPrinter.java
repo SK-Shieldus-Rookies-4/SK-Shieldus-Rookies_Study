@@ -1,9 +1,9 @@
 package myspring.di.xml;
 
-public class StringPrinterBean implements PrinterBean {
+public class StringPrinter implements Printer {
 	private StringBuffer buffer = new StringBuffer();
 	
-	public StringPrinterBean() {
+	public StringPrinter() {
 		System.out.println(this.getClass().getName() + " 생성자가 호출됨");
 	}
 

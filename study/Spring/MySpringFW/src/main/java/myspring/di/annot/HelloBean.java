@@ -1,4 +1,4 @@
-package myspring.di.anoot;
+package myspring.di.annot;
 
 import java.util.List;
 
