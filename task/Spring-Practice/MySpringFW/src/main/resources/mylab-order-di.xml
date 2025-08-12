@@ -19,7 +19,7 @@
         <constructor-arg value="800000"/>
     </bean>
 
-    <!-- shoppingCart : products 리스트 주입 -->
+    <!-- shoppingCart : setter injection 설정 -->
     <bean id="shoppingCart" class="mylab.order.di.xml.ShoppingCart">
         <property name="products">
             <list>
@@ -29,7 +29,7 @@
         </property>
     </bean>
 
-    <!-- orderService : shoppingCart 주입 -->
+    <!-- orderService : SpringBean을 선언 -->
     <bean id="orderService" class="mylab.order.di.xml.OrderService">
         <property name="shoppingCart" ref="shoppingCart"/>
     </bean>
