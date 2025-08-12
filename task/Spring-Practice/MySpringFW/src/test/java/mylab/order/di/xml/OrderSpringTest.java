@@ -19,19 +19,19 @@ public class OrderSpringTest {
 	OrderService orderService;
 	
     @Test
-    public void testShoppingCartBean() {
+    public void testShoppingCart() {
 
-        assertNotNull(shoppingCart); // Bean이 null이 아님
-        assertEquals(2, shoppingCart.getProducts().size()); // 상품 2개
+        assertNotNull(shoppingCart); 
+        assertEquals(2, shoppingCart.getProducts().size()); 
         assertEquals("노트북", shoppingCart.getProducts().get(0).getName());
         assertEquals("스마트폰", shoppingCart.getProducts().get(1).getName());
     }
 
     @Test
-    public void testOrderServiceBean() {
+    public void testOrderService() {
     	 
         assertNotNull(orderService.getShoppingCart());
         double total = orderService.calculateOrderTotal();
-        assertEquals(950000, total); // 150000 + 800000
+        assertEquals(950000, total); 
     }
 }
