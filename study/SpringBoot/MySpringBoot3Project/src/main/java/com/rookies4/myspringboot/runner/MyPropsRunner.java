@@ -13,7 +13,7 @@ public class MyPropsRunner implements ApplicationRunner {
         System.out.println("Program Arguments = " + args.containsOption("bar"));
 
         for(String argName: args.getOptionNames()) {
-            System.out.println("argName = " + argName);
+            System.out.println("아규먼트 이름 = " + argName);
         }
     }
 }
