@@ -1,0 +1,19 @@
+package com.rookies4.myspringboot.runner;
+
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyPropsRunner implements ApplicationRunner {
+
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        System.out.println("Vm Argments " + args.containsOption("foo"));
+        System.out.println("Program Arguments = " + args.containsOption("bar"));
+
+        for(String argName: args.getOptionNames()) {
+            System.out.println("argName = " + argName);
+        }
+    }
+}
