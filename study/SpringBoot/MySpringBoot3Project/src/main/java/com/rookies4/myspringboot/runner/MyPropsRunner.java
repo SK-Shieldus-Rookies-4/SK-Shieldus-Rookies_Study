@@ -2,6 +2,8 @@ package com.rookies4.myspringboot.runner;
 
 import com.rookies4.myspringboot.config.vo.CustomVO;
 import com.rookies4.myspringboot.property.MyBootProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -28,43 +30,46 @@ public class MyPropsRunner implements ApplicationRunner {
     @Autowired
     private CustomVO custom;
 
+    //Logger 객체 생성
+    private Logger logger = LoggerFactory.getLogger(MyPropsRunner.class);
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("현재 활성화된 CustomerVo Bean = " + custom); // custom.toString()을 자동으로 호출해줌
+        logger.debug("Logger 구현객체명 = {}", logger.getClass().getName());
 
-        System.out.println("MyBootProperties.getName() = " + properties.getName());
-        System.out.println("MyBootProperties.getAge() = " + properties.getAge());
-        System.out.println("MyBootProperties.getFullName() = " + properties.getFullName());
+        logger.info("현재 활성화된 CustomerVO Bean = {}", custom);
 
-        System.out.println("Properties myboot.name = " + name);
-        System.out.println("Properties myboot.age = " + age);
-        System.out.println("Properties myboot.fullName = " + environment.getProperty("myboot.fullName"));
+        logger.info("MyBootProperties.getName() = {}", properties.getName());
+        logger.info("MyBootProperties.getAge() = {}", properties.getAge());
+        logger.info("MyBootProperties.getFullName() = {}", properties.getFullName());
 
-        System.out.println("VM Argments " + args.containsOption("foo")); //false
-        System.out.println("Program Arguments = " + args.containsOption("bar")); //true
+        logger.info("Properties myboot.name = {}", name);
+        logger.info("Properties myboot.age = {}", age);
+        logger.info("Properties myboot.fullName = {}", environment.getProperty("myboot.fullName"));
 
-        for(String argName: args.getOptionNames()) {
+        logger.debug("VM Arguments = {}", args.containsOption("foo")); //false
+        logger.debug("Program Arguments = {}", args.containsOption("bar")); //true
+
+        //Program Argument의 모든 이름을 출력하기
+        for (String argName : args.getOptionNames()) {
             System.out.println("아규먼트 이름 = " + argName);
         }
-
-        //args.containsOptionNames()의 리턴타입 Set<String>
-        //Interable의 foreach(Consumer) 메서드 호출하기
+        //args.getOptionNames() 의 리턴타입 Set<String>
+        //Iterable의 foreach(Consumer) 메서드 호출하기
         //Consumer의 추상메서드 void accept(T t)
-        //1. 익명의 Inner class (Anonymous Inner Class)
+        //1. 익명의 Inner class ( Anonymous Inner Class)
         args.getOptionNames().forEach(new Consumer<String>() {
             @Override
             public void accept(String s) {
-                System.out.println("Inner Class 아규먼트 이름 = " + s);
+                logger.debug("Inner Class 아규먼트 이름 =  = {}", s);
             }
         });
-
         System.out.println("===> 람다함수");
         //2. 함수형 인터페이스 (람다함수)
-        args.getOptionNames().forEach(name -> System.out.println(name));
-
+        args.getOptionNames().forEach(name -> logger.debug(name));
         System.out.println("===> Method Reference");
-        //3.Method Reference (아규먼트를 생략한 람다함수)
+        //3. Method Reference (아규먼트를 생략한 람다함수)
+        //args.getOptionNames().forEach(System.out::println);
         args.getOptionNames().forEach(System.out::println);
-
     }
 }
