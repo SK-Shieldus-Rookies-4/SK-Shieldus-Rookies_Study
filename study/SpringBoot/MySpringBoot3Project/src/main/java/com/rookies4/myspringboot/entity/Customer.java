@@ -1,12 +1,24 @@
 package com.rookies4.myspringboot.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @Table(name = "customers")
 @Getter @Setter
 public class Customer {
+    //Primary Key, PK값을 Persistence Provider가 결정해라
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    //Unique한 값을 가져야 하고, Null값을 허용하지 않는다.
+    @Column(unique = true, nullable = false)
+    private String customerID;
+
+    //Null값을 허용하지 않는다.
+    @Column(nullable = false)
+    private String customerName;
+
 }
