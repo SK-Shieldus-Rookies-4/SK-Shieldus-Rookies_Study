@@ -18,7 +18,7 @@ public class Customer {
 
     //Unique한 값을 가져야 하고, Null값을 허용하지 않는다.
     @Column(unique = true, nullable = false)
-    private String customerID;
+    private String customerId;
 
     //Null값을 허용하지 않는다.
     @Column(nullable = false)
