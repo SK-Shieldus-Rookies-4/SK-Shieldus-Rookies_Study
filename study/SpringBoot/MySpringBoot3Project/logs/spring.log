@@ -2377,3 +2377,43 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2025-08-14T11:19:52.180+09:00  INFO 52525 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-14T11:19:52.182+09:00  INFO 52525 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
 2025-08-14T11:19:52.187+09:00  INFO 52525 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2025-08-14T13:25:00.317+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.CustomerRepositoryTest           : Starting CustomerRepositoryTest using Java 17.0.2 with PID 56170 (started by rose in /Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project)
+2025-08-14T13:25:00.323+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.CustomerRepositoryTest           : The following 1 profile is active: "prod"
+2025-08-14T13:25:01.133+09:00  INFO 56170 --- [MySpringBoot3Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14T13:25:01.174+09:00  INFO 56170 --- [MySpringBoot3Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2025-08-14T13:25:01.560+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14T13:25:01.605+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14T13:25:01.643+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-14T13:25:01.897+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14T13:25:01.920+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-14T13:25:01.990+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@26d24d7a
+2025-08-14T13:25:01.992+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-14T13:25:02.015+09:00  WARN 56170 --- [MySpringBoot3Project] [main] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14T13:25:02.037+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14T13:25:02.810+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14T13:25:02.854+09:00  INFO 56170 --- [MySpringBoot3Project] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14T13:25:03.016+09:00  WARN 56170 --- [MySpringBoot3Project] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14T13:25:03.272+09:00  WARN 56170 --- [MySpringBoot3Project] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-14T13:25:03.907+09:00  INFO 56170 --- [MySpringBoot3Project] [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-14T13:25:03.970+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.CustomerRepositoryTest           : Started CustomerRepositoryTest in 3.99 seconds (process running for 5.335)
+2025-08-14T13:25:04.004+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-14T13:25:04.006+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-14T13:25:04.006+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-14T13:25:04.007+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-14T13:25:04.007+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-14T13:25:04.009+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-14T13:25:04.009+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 60
+2025-08-14T13:25:04.009+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-14T13:25:04.009+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-14T13:25:04.010+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 5
+2025-08-14T13:25:04.010+09:00  INFO 56170 --- [MySpringBoot3Project] [main] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-14T13:25:04.578+09:00  INFO 56170 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14T13:25:04.580+09:00  INFO 56170 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-14T13:25:04.595+09:00  INFO 56170 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

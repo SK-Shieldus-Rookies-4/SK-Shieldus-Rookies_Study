@@ -36,6 +36,13 @@ class CustomerRepositoryTest {
         Customer ac001Customer = customerByCustomerId.orElseGet(() -> new Customer());
         assertThat(ac001Customer.getCustomerName()).isEqualTo("스프링부트");
 
+        //고객번호(AC003)가 존재하지 않는 경우
+        Customer notFoundcustomer =
+                customerRepository.findByCustomerId("AC003").orElseGet(() -> new Customer());
+        assertThat(notFoundcustomer.getCustomerName()).isNull();
+
+
+
 
 
     }
