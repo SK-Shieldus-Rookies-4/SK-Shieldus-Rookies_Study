@@ -19,6 +19,14 @@ class CustomerRepositoryTest {
     CustomerRepository customerRepository;
 
     @Test
+    //Customer 조회 존재하지 않으면 예외발생
+    void testNotFoundCustomer() {
+        Customer notFoundcustomer =
+                customerRepository.findByCustomerId("AC003")
+                        .orElseThrow(() -> new RuntimeException("Customer Not Found"));
+    }
+
+    @Test
     //Customer 조회
     void testFindCustomer() {
         //findById() 호출
