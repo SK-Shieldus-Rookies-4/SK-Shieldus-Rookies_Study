@@ -23,6 +23,20 @@ class CustomerRepositoryTest {
     void testFindCustomer() {
         //findById() 호출
         Optional<Customer> customerById = customerRepository.findById(1L);
+        //assertThat(customerById).isNotEmpty();
+        //assertThat(customerById).isEmpty();
+        if(customerById.isPresent()) {
+            Customer existCustomer = customerById.get();
+            assertThat(existCustomer.getId()).isEqualTo(1L);
+        }
+
+        //Optional의 T orELseGet(Supplier) 고객번호(AC001)가 존재하는 경우
+        //Supplier의 추상메서드 T get()
+        Optional<Customer> customerByCustomerId = customerRepository.findByCustomerId("AC001");
+        Customer ac001Customer = customerByCustomerId.orElseGet(() -> new Customer());
+        assertThat(ac001Customer.getCustomerName()).isEqualTo("스프링부트");
+
+
 
     }
 
