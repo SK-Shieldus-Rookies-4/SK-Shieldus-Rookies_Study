@@ -40,11 +40,6 @@ class CustomerRepositoryTest {
         Customer notFoundcustomer =
                 customerRepository.findByCustomerId("AC003").orElseGet(() -> new Customer());
         assertThat(notFoundcustomer.getCustomerName()).isNull();
-
-
-
-
-
     }
 
     @Test
