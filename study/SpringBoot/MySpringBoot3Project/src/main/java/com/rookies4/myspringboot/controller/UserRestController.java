@@ -35,15 +35,13 @@ public class UserRestController {
     }
 
     //개별 조회 : ID로
-    @GetMapping("/{id}")
-    public UserEntity getUser(@PathVariable Long id) {
-        Optional<UserEntity> optionalUser = userRepository.findById(id);
-        //orElseThrow(Supplier) Supplier의 추상메서드 T get()
-        UserEntity existUser = optionalUser
-                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
-        return existUser;
-
-
-    }
+//    @GetMapping("/{id}")
+//    public UserEntity getUser(@PathVariable Long id) {
+//        Optional<UserEntity> optionalUser = userRepository.findById(id);
+//        //orElseThrow(Supplier) Supplier의 추상메서드 T get()
+//        UserEntity existUser = optionalUser
+//                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+//        return existUser;
+//    }
 
 }
