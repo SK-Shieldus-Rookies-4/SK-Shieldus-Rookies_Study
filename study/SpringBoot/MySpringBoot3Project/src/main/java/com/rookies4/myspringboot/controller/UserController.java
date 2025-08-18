@@ -16,7 +16,7 @@ public class UserController {
 
     private final UserRepository userRepository;
 
-    @GetMapping("/index")
+    @GetMapping("/users/index")
     public ModelAndView index() {
         List<UserEntity> userEntityList = userRepository.findAll();
         return new ModelAndView("index", "users", userEntityList);
@@ -24,7 +24,6 @@ public class UserController {
 
     @GetMapping("/thymeleaf")
     public String leaf(Model model) {
-
         model.addAttribute("name", "스프링부트");
         return "leaf";
     }
