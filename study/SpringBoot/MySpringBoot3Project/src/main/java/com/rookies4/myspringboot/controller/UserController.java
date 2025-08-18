@@ -36,7 +36,8 @@ public class UserController {
         userRepository.save(user);
 //        model.addAttribute("users", userRepository.findAll());
 //        return "index";
-        return "redirect:/user/index";
+        //User목록조회하는 Patch로 URL Redirection 하기
+        return "redirect:/users/index";
     }
 
     @GetMapping("/users/index")

@@ -7,11 +7,14 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>DateTime</th>
+            <th>User Update</th>
         </tr>
         <tr th:each="user : ${users}">
             <td th:text="${user.name}"></td>
             <td th:text="${user.email}"></td>
             <th th:text="${#temporals.format(user.createdAt,'yyyy-MM-dd hh:mm E a')}"></th>
+            <td><a th:href="@{/users/edit/{id}(id=${user.id})}">User update</a></td>
         </tr>
     </table>
     <p>
