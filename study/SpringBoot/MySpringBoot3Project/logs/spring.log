@@ -5518,3 +5518,228 @@ com.rookies4.myspringboot.exception.BusinessException: User Not Found
 2025-08-18T10:44:44.787+09:00  INFO 10718 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 24
 2025-08-18T10:44:44.787+09:00  INFO 10718 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
 2025-08-18T10:44:44.789+09:00  INFO 10718 --- [MySpringBoot3Project] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-18T11:07:47.297+09:00  INFO 10718 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-18T11:07:47.302+09:00  INFO 10718 --- [MySpringBoot3Project] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-18T11:07:47.308+09:00  INFO 10718 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:07:47.311+09:00  INFO 10718 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-15 - Shutdown initiated...
+2025-08-18T11:07:47.318+09:00  INFO 10718 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-15 - Shutdown completed.
+2025-08-18T11:07:49.907+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Starting MySpringBoot3ProjectApplication using Java 17.0.2 with PID 16514 (/Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project)
+2025-08-18T11:07:49.911+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : The following 1 profile is active: "prod"
+2025-08-18T11:07:49.947+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-18T11:07:49.948+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-18T11:07:50.761+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-18T11:07:50.802+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2025-08-18T11:07:51.238+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-18T11:07:51.251+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-18T11:07:51.252+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-18T11:07:51.288+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-18T11:07:51.289+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1340 ms
+2025-08-18T11:07:51.477+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-18T11:07:51.520+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-18T11:07:51.543+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-18T11:07:51.720+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-18T11:07:51.746+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-18T11:07:51.806+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7c3e38b4
+2025-08-18T11:07:51.807+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-18T11:07:51.829+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-18T11:07:51.847+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-18T11:07:52.509+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-18T11:07:52.540+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:07:52.814+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-18T11:07:52.841+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-18T11:07:53.116+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-18T11:07:53.341+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2025-08-18T11:07:53.378+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-18T11:07:53.387+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-18T11:07:53.471+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-18T11:07:53.495+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Started MySpringBoot3ProjectApplication in 4.214 seconds (process running for 5.499)
+2025-08-18T11:07:53.542+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-18T11:07:53.543+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-18T11:07:53.543+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-18T11:07:53.544+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-18T11:07:53.545+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-18T11:07:53.547+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-18T11:07:53.547+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 60
+2025-08-18T11:07:53.547+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-18T11:07:53.548+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-18T11:07:53.548+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 10
+2025-08-18T11:07:53.549+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-18T11:08:20.404+09:00  INFO 16514 --- [MySpringBoot3Project] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-18T11:08:20.405+09:00  INFO 16514 --- [MySpringBoot3Project] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-18T11:08:20.407+09:00  INFO 16514 --- [MySpringBoot3Project] [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2025-08-18T11:11:00.324+09:00  INFO 16514 --- [MySpringBoot3Project] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-08-18T11:11:00.334+09:00  INFO 16514 --- [MySpringBoot3Project] [Thread-5] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-18T11:11:00.340+09:00  INFO 16514 --- [MySpringBoot3Project] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-18T11:11:00.347+09:00  INFO 16514 --- [MySpringBoot3Project] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:11:00.351+09:00  INFO 16514 --- [MySpringBoot3Project] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-18T11:11:00.358+09:00  INFO 16514 --- [MySpringBoot3Project] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-18T11:11:00.450+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Starting MySpringBoot3ProjectApplication using Java 17.0.2 with PID 16514 (/Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project)
+2025-08-18T11:11:00.450+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : The following 1 profile is active: "prod"
+2025-08-18T11:11:00.661+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-18T11:11:00.673+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2025-08-18T11:11:00.766+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-18T11:11:00.767+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-18T11:11:00.768+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-18T11:11:00.776+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-18T11:11:00.777+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 326 ms
+2025-08-18T11:11:00.833+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-18T11:11:00.834+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-18T11:11:00.845+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-18T11:11:00.846+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-08-18T11:11:00.852+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@380bbdc7
+2025-08-18T11:11:00.852+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-08-18T11:11:00.854+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-18T11:11:00.855+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-18T11:11:00.916+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-18T11:11:00.924+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:11:00.999+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-18T11:11:01.007+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-18T11:11:01.085+09:00  WARN 16514 --- [MySpringBoot3Project] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-18T11:11:01.196+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2025-08-18T11:11:01.205+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-18T11:11:01.215+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-18T11:11:01.258+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-18T11:11:01.276+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Started MySpringBoot3ProjectApplication in 0.87 seconds (process running for 193.335)
+2025-08-18T11:11:01.281+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-18T11:11:01.282+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-18T11:11:01.282+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-18T11:11:01.282+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-18T11:11:01.283+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-18T11:11:01.284+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-18T11:11:01.284+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 59
+2025-08-18T11:11:01.284+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-18T11:11:01.285+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-18T11:11:01.285+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 15
+2025-08-18T11:11:01.286+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-18T11:11:01.289+09:00  INFO 16514 --- [MySpringBoot3Project] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-18T11:11:34.825+09:00  INFO 16514 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-18T11:11:34.827+09:00  INFO 16514 --- [MySpringBoot3Project] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-18T11:11:34.831+09:00  INFO 16514 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:11:34.832+09:00  INFO 16514 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2025-08-18T11:11:34.836+09:00  INFO 16514 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2025-08-18T11:11:37.495+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Starting MySpringBoot3ProjectApplication using Java 17.0.2 with PID 16716 (/Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project)
+2025-08-18T11:11:37.501+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : The following 1 profile is active: "prod"
+2025-08-18T11:11:37.542+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-18T11:11:37.543+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-18T11:11:38.369+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-18T11:11:38.425+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2025-08-18T11:11:39.067+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-18T11:11:39.087+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-18T11:11:39.089+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-18T11:11:39.138+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-18T11:11:39.140+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1595 ms
+2025-08-18T11:11:39.317+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-18T11:11:39.353+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-18T11:11:39.374+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-18T11:11:39.564+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-18T11:11:39.585+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-18T11:11:39.647+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@342962ea
+2025-08-18T11:11:39.648+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-18T11:11:39.670+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-18T11:11:39.685+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-18T11:11:40.348+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-18T11:11:40.376+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:11:40.621+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-18T11:11:40.640+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-18T11:11:40.808+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-18T11:11:40.982+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2025-08-18T11:11:41.007+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-18T11:11:41.015+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-18T11:11:41.084+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-18T11:11:41.103+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Started MySpringBoot3ProjectApplication in 4.067 seconds (process running for 5.321)
+2025-08-18T11:11:41.140+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-18T11:11:41.141+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-18T11:11:41.141+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-18T11:11:41.141+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-18T11:11:41.142+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-18T11:11:41.143+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-18T11:11:41.144+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 24
+2025-08-18T11:11:41.144+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-18T11:11:41.144+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-18T11:11:41.144+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 15
+2025-08-18T11:11:41.145+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-18T11:12:06.556+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-18T11:12:06.557+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-18T11:12:06.558+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-18T11:19:00.103+09:00  INFO 16716 --- [MySpringBoot3Project] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-08-18T11:19:00.121+09:00  INFO 16716 --- [MySpringBoot3Project] [Thread-5] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-18T11:19:00.128+09:00  INFO 16716 --- [MySpringBoot3Project] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-18T11:19:00.136+09:00  INFO 16716 --- [MySpringBoot3Project] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:19:00.143+09:00  INFO 16716 --- [MySpringBoot3Project] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-18T11:19:00.150+09:00  INFO 16716 --- [MySpringBoot3Project] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-18T11:19:00.262+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Starting MySpringBoot3ProjectApplication using Java 17.0.2 with PID 16716 (/Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Study/study/SpringBoot/MySpringBoot3Project)
+2025-08-18T11:19:00.262+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : The following 1 profile is active: "prod"
+2025-08-18T11:19:00.448+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-18T11:19:00.456+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2025-08-18T11:19:00.542+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-18T11:19:00.544+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-18T11:19:00.544+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-18T11:19:00.552+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-18T11:19:00.553+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2025-08-18T11:19:00.596+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-18T11:19:00.597+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-18T11:19:00.608+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-18T11:19:00.609+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-08-18T11:19:00.616+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@79ee6139
+2025-08-18T11:19:00.616+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-08-18T11:19:00.617+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-18T11:19:00.618+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-18T11:19:00.664+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-18T11:19:00.674+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-18T11:19:00.723+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-18T11:19:00.728+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-18T11:19:00.765+09:00  WARN 16716 --- [MySpringBoot3Project] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-18T11:19:00.816+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2025-08-18T11:19:00.821+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-18T11:19:00.823+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-18T11:19:00.838+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-18T11:19:00.845+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Started MySpringBoot3ProjectApplication in 0.626 seconds (process running for 445.068)
+2025-08-18T11:19:00.846+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-18T11:19:00.847+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-18T11:19:00.847+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-18T11:19:00.847+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-18T11:19:00.847+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-18T11:19:00.847+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-18T11:19:00.848+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 26
+2025-08-18T11:19:00.848+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-18T11:19:00.848+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-18T11:19:00.848+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 76
+2025-08-18T11:19:00.849+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-18T11:19:00.851+09:00  INFO 16716 --- [MySpringBoot3Project] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-18T11:19:00.998+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-18T11:19:00.999+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-18T11:19:01.000+09:00  INFO 16716 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-18T11:47:15.278+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=15m14s472ms).
+2025-08-18T11:49:05.534+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m50s257ms).
+2025-08-18T12:18:43.519+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=28m37s974ms).
+2025-08-18T12:23:50.639+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=4m37s120ms).
+2025-08-18T12:47:34.156+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=22m43s503ms).
+2025-08-18T13:01:51.600+09:00  WARN 16716 --- [MySpringBoot3Project] [HikariPool-2 housekeeper] c.z.h.p.HikariPool                       : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=4m47s364ms).
