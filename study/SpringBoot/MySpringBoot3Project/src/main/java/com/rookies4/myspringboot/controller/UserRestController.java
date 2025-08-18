@@ -65,6 +65,7 @@ public class UserRestController {
         return ResponseEntity.ok("User가 삭제되었습니다.");
     }
 
+    //공통메서드 구현
     private UserEntity getExistUser(Long id) {
         Optional<UserEntity> optionalUser = userRepository.findById(id);
         //orElseThrow(Supplier) Supplier의 추상메서드 T get()
