@@ -2,11 +2,14 @@ package com.rookies4.myspringboot.controller;
 
 import com.rookies4.myspringboot.entity.UserEntity;
 import com.rookies4.myspringboot.repository.UserRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -20,6 +23,20 @@ public class UserController {
     @GetMapping("/users/signup")
     public String showSignUpForm(@ModelAttribute("user") UserEntity user) {
         return "add-user";
+    }
+
+    @PostMapping("/users/adduser")
+    public String addUser(@Valid @ModelAttribute("user") UserEntity user,
+                          BindingResult result, Model model) {
+        //검증 오류가 발생한 경우
+        if (result.hasErrors()) {
+            return "add-user";
+        }
+        //등록
+        userRepository.save(user);
+//        model.addAttribute("users", userRepository.findAll());
+//        return "index";
+        return "redirect:/user/index";
     }
 
     @GetMapping("/users/index")
