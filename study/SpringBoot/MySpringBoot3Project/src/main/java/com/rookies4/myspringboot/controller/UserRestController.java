@@ -2,8 +2,10 @@ package com.rookies4.myspringboot.controller;
 
 import com.rookies4.myspringboot.entity.UserEntity;
 import com.rookies4.myspringboot.exception.BusinessException;
+import com.rookies4.myspringboot.repository.CustomerRepository;
 import com.rookies4.myspringboot.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,6 +44,18 @@ public class UserRestController {
         UserEntity existUser = optionalUser
                 .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
         return existUser;
+    }
+
+    //Email로 조회하고, 수정
+    @PatchMapping("/{email}/")
+    public UserEntity updateUser(@PathVariable String email, @RequestBody UserEntity userDetail){
+        UserEntity existUser = userRepository.findByEmail(email) //Optional<UserEntity>
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        //name 변경
+        existUser.setName(userDetail.getName());
+        //DB에 저장
+        UserEntity updateUser = userRepository.save(existUser);
+        return updateUser;
     }
 
 }
