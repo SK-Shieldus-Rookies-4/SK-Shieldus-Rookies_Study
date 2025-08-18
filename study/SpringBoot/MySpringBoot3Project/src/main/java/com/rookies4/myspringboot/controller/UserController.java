@@ -11,7 +11,6 @@ public class UserController {
 
         model.addAttribute("name", "스프링부트");
         return "leaf";
-
     }
 
 }
