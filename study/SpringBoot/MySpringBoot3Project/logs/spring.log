@@ -6014,3 +6014,7 @@ com.rookies4.myspringboot.exception.BusinessException: User Not Found
 2025-08-18T14:14:37.389+09:00  INFO 20724 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 55
 2025-08-18T14:14:37.390+09:00  INFO 20724 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
 2025-08-18T14:14:37.392+09:00  INFO 20724 --- [MySpringBoot3Project] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-18T14:19:31.788+09:00  INFO 20724 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-18T14:19:31.790+09:00  INFO 20724 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-18T14:19:31.803+09:00  INFO 20724 --- [MySpringBoot3Project] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 13 ms
+2025-08-18T14:37:27.145+09:00  WARN 20724 --- [MySpringBoot3Project] [HikariPool-3 housekeeper] c.z.h.p.HikariPool                       : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=6m19s859ms).
