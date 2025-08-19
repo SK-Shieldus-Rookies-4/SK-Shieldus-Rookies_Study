@@ -33,3 +33,15 @@ build/
 .vscode/
 
 /logs/spring.log
+
+# 압축파일 무시
+*.zip
+
+# Spring-Practice 프로젝트 무시
+task/Spring-Practice/
+
+# Backend 프로젝트 무시
+Backend/
+
+# Servers 폴더 무시
+Servers/
