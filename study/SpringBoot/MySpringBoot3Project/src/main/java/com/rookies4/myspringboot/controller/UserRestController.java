@@ -65,6 +65,12 @@ public class UserRestController {
         return ResponseEntity.ok("User가 삭제되었습니다.");
     }
 
+    //인증 없이 접근 가능한 메서드
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome this endpoint is not secure";
+    }
+
     //공통메서드 구현
     private UserEntity getExistUser(Long id) {
         Optional<UserEntity> optionalUser = userRepository.findById(id);
