@@ -16,6 +16,7 @@ public class UserInfoUserDetails implements UserDetails {
     private List<GrantedAuthority> authorities;
     private UserInfo userInfo;
 
+    // 생성자로 UserInfo 엔티티 객체를 주입 받는다.
     public UserInfoUserDetails(UserInfo userInfo) {
         this.userInfo = userInfo;
         this.email=userInfo.getEmail();
@@ -30,6 +31,10 @@ public class UserInfoUserDetails implements UserDetails {
         return authorities;
     }
 
+    /*
+        인증을 처리하는 AuthenticationManager객체가 인증을 처리할 때
+        getUsername() 와 getPassword() 메서드를 호출한다.
+     */
     @Override
     public String getPassword() {
         return password;
