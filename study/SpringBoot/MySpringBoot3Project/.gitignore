@@ -32,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
-/logs/spring.log
+/logs/**
 
 # 압축파일 무시
 *.zip
