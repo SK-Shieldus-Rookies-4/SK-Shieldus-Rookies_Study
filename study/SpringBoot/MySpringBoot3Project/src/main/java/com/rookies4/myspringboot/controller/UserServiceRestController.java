@@ -4,8 +4,11 @@ import com.rookies4.myspringboot.controller.dto.UserDTO;
 import com.rookies4.myspringboot.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Request;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,7 +27,11 @@ public class UserServiceRestController {
     public ResponseEntity<UserDTO.UserResponse> getUserById(@PathVariable Long id) {
         UserDTO.UserResponse userById = userService.getUserById(id);
         return ResponseEntity.ok(userById);
+    }
 
+    @GetMapping
+    public ResponseEntity<List<UserDTO.UserResponse>> getAllUsers() {
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
 
