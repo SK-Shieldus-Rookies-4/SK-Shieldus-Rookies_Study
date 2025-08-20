@@ -66,7 +66,13 @@ public class UserService {
         //dirty read (setter 매서드만 호출하고, save() 메서드는 호출하지 않아도 됨)
         existUser.setName(request.getName());
         return new UserDTO.UserResponse(existUser);
+    }
 
+    //User 삭제
+    @Transactional
+    public void deleteUser(Long id) {
+        UserEntity userEntity = getUserExist(id);
+        userRepository.delete(userEntity);
     }
 
     //내부 Helper Method
