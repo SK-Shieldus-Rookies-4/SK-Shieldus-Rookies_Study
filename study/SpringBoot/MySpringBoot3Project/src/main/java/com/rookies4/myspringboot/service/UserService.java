@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -56,9 +57,23 @@ public class UserService {
                   .toList(); //List<UserDTO.UserResponse>
     }
 
+    //User 수정
+    @Transactional
+    public UserDTO.UserResponse updateUser(String email,
+                                           UserDTO.UserUpdateRequest request) {
+        UserEntity existUser = userRepository.findByEmail(email)
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        //dirty read (setter 매서드만 호출하고, save() 메서드는 호출하지 않아도 됨)
+        existUser.setName(request.getName());
+        return new UserDTO.UserResponse(existUser);
+
+    }
+
     //내부 Helper Method
     private UserEntity getUserExist(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
     }
+
+
 }
