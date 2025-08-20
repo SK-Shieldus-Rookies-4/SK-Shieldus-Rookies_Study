@@ -113,7 +113,9 @@ public class DefaultExceptionAdvice {
         ex.getBindingResult()
                 .getAllErrors()
                 .forEach((error) -> {
+                    //필드명
                     String fieldName = ((FieldError) error).getField();
+                    //필드에러 메시지
                     String errorMessage = error.getDefaultMessage();
                     errors.put(fieldName, errorMessage);
                 });
