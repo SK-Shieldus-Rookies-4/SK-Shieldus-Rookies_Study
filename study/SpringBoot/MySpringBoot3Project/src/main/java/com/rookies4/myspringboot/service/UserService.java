@@ -26,6 +26,7 @@ public class UserService {
         //DTO => Entity 로 변환
         UserEntity entity = request.toEntity();
         UserEntity savedEntity = userRepository.save(entity);
-        return new UserDTO.UserResponse(savedEntity)
+        //Entity => DTO로 변환 후 리턴됨
+        return new UserDTO.UserResponse(savedEntity);
     }
 }

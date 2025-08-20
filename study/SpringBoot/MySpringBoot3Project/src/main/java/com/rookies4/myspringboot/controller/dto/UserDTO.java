@@ -19,7 +19,7 @@ public class UserDTO {
         @NotBlank(message = "Email 은 필수 입력항목입니다.")
         private String email;
 
-        // DTO를 Entity로 변환하는 메서드
+;        // DTO를 Entity로 변환하는 메서드
         public UserEntity toEntity() {
             UserEntity user = new UserEntity();
             user.setName(this.name);
