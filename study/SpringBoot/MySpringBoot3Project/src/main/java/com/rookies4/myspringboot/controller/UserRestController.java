@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor // final이 붙은 변수의 생성자를 초기화해줌
-@RequestMapping("/api/users")
+@RequestMapping("/api/users1")
 public class UserRestController {
     private final UserRepository userRepository; // final 붙이면 선언과 동시에 초기화 필요
 
