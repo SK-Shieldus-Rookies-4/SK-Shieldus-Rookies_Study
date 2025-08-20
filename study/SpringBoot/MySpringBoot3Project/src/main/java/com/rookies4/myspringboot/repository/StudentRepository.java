@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface StudentRepository extends JpaRepository<Student, Long> {
     //학번으로 조회하는 Query Method
     Optional<Student> findByStudentNumber(String studentNumber);
-    //입력
+    //Fetch Join을 사용하여 1개의 Query만 생성이 되도록 처리함
     @Query("SELECT s FROM Student s JOIN FETCH s.studentDetail WHERE s.id = :id")
     Optional<Student> findByIdWithStudentDetail(@Param("id") Long studentId);
     
