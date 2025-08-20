@@ -16,6 +16,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     //Fetch Join을 사용하여 1개의 Query만 생성이 되도록 처리함
     @Query("SELECT s FROM Student s JOIN FETCH s.studentDetail WHERE s.id = :id")
     Optional<Student> findByIdWithStudentDetail(@Param("id") Long studentId);
-    
+
+    //학번의 존재여부
     boolean existsByStudentNumber(String studentNumber);
 }
