@@ -85,9 +85,10 @@ public class StudentService {
                     .phoneNumber(request.getDetailRequest().getPhoneNumber())
                     .email(request.getDetailRequest().getEmail())
                     .dateOfBirth(request.getDetailRequest().getDateOfBirth())
+                    //양방향 연관관계 StudentDetail에게 Student 객체의 레퍼런스 알려주기
                     .student(studentEntity)
                     .build();
-            
+            //양방향 연관관계 Student에게 StudentDetail 객체의 레퍼런스 알려주기
             studentEntity.setStudentDetail(studentDetailEntity);
         }
 
