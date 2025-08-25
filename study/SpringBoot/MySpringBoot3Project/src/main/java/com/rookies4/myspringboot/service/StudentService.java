@@ -47,9 +47,9 @@ public class StudentService {
 
     @Transactional
     public StudentDTO.Response createStudent(StudentDTO.Request request) {
-        // Validate student number is not already in use
+        // Validate studentEntity number is not already in use
         if (studentRepository.existsByStudentNumber(request.getStudentNumber())) {
-            throw new BusinessException("Student already exists with student number: "
+            throw new BusinessException("Student already exists with studentEntity number: "
                     + request.getStudentNumber(),
                     HttpStatus.CONFLICT);
         }
@@ -72,27 +72,27 @@ public class StudentService {
                     HttpStatus.CONFLICT);
         }
 
-        // Create student entity
-        Student student = Student.builder()
+        // Create studentEntity entity
+        Student studentEntity = Student.builder()
                 .name(request.getName())
                 .studentNumber(request.getStudentNumber())
                 .build();
         
-        // Create student detail if provided
+        // Create studentEntity detail if provided
         if (request.getDetailRequest() != null) {
-            StudentDetail studentDetail = StudentDetail.builder()
+            StudentDetail studentDetailEntity = StudentDetail.builder()
                     .address(request.getDetailRequest().getAddress())
                     .phoneNumber(request.getDetailRequest().getPhoneNumber())
                     .email(request.getDetailRequest().getEmail())
                     .dateOfBirth(request.getDetailRequest().getDateOfBirth())
-                    .student(student)
+                    .student(studentEntity)
                     .build();
             
-            student.setStudentDetail(studentDetail);
+            studentEntity.setStudentDetail(studentDetailEntity);
         }
 
-        // Save and return the student
-        Student savedStudent = studentRepository.save(student);
+        // Save and return the studentEntity
+        Student savedStudent = studentRepository.save(studentEntity);
         return StudentDTO.Response.fromEntity(savedStudent);
     }
 
