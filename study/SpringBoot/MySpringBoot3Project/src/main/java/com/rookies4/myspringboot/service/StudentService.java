@@ -4,6 +4,7 @@ import com.rookies4.myspringboot.controller.dto.StudentDTO;
 import com.rookies4.myspringboot.entity.Student;
 import com.rookies4.myspringboot.entity.StudentDetail;
 import com.rookies4.myspringboot.exception.BusinessException;
+import com.rookies4.myspringboot.exception.ErrorCode;
 import com.rookies4.myspringboot.repository.StudentDetailRepository;
 import com.rookies4.myspringboot.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,14 +34,13 @@ public class StudentService {
 
     public StudentDTO.Response getStudentById(Long id) {
         Student student = studentRepository.findByIdWithStudentDetail(id)
-                .orElseThrow(() -> new BusinessException("Student not found with id: " + id, HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new BusinessException(ErrorCode.RESOURCE_NOT_FOUND,"Student","Id",id));
         return StudentDTO.Response.fromEntity(student);
     }
 
     public StudentDTO.Response getStudentByStudentNumber(String studentNumber) {
         Student student = studentRepository.findByStudentNumber(studentNumber)
-                .orElseThrow(() -> new BusinessException("Student not found with student number: " + studentNumber,
-                        HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new BusinessException(ErrorCode.RESOURCE_NOT_FOUND,"Student","학번",studentNumber));
         return StudentDTO.Response.fromEntity(student);
     }
 
@@ -48,9 +48,7 @@ public class StudentService {
     public StudentDTO.Response createStudent(StudentDTO.Request request) {
         // Validate student number is not already in use
         if (studentRepository.existsByStudentNumber(request.getStudentNumber())) {
-            throw new BusinessException("Student already exists with student number: "
-                    + request.getStudentNumber(),
-                    HttpStatus.CONFLICT);
+            throw new BusinessException(ErrorCode.STUDENT_NUMBER_DUPLICATE, request.getStudentNumber());
         }
 
         // Validate email is not already in use (if provided)
