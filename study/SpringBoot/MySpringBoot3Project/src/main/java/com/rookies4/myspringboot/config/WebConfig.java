@@ -14,11 +14,10 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/mobile/")
                 .setCachePeriod(20);//20초
     }
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("*");
-
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("*");
+//    }
 }
