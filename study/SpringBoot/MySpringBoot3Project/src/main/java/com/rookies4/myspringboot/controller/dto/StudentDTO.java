@@ -1,4 +1,5 @@
-import com.rookies4.myspringboot.controller.dto.DepartmentDTO;
+package com.rookies4.myspringboot.controller.dto;
+
 import com.rookies4.myspringboot.entity.Student;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
