@@ -108,7 +108,15 @@
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
-	</dependencies>
+        <!-- Hibernate6 Module -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-hibernate6</artifactId>
+            <version>2.18.3</version>
+        </dependency>
+
+
+    </dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
